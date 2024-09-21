@@ -10,18 +10,14 @@
     <div class="container-fluid">
         <div class="d-flex ms-auto">
             <a class="navbar-brand" href="/listings"><i class="fa-regular fa-compass"></i></a>
-            <form class="d-flex" role="search" action="/listings/country" method="get" >
-                <div class="row">
-                    <div class="col-md-4 offset-md-2">
-                        <!-- Desktop search bar -->
-                        <input class="form-control me-2 d-none d-md-block" type="search" name="country" placeholder="Search destinations" style="width: 250px;">
-                        <!-- Mobile search bar -->
-                        <input class="form-control me-2 d-block d-md-none search-input" type="search" name="country" placeholder="Search destinations" style="width: 150px;">
-                        <button class="btn search-btn" type="submit">
-                            <i class="fa-solid fa-magnifying-glass"></i>Search
-                        </button>
-                    </div>
-                </div>
+            <form class="search-form d-flex" role="search" action="/listings/country" method="get" >
+                <!-- Desktop search bar -->
+                <input class="form-control me-2 d-none d-md-block" type="search" name="country" placeholder="Search destinations" style="width: 250px;">
+                <!-- Mobile search bar -->
+                <input class="form-control me-2 d-block d-md-none search-input" type="search" name="country" placeholder="Search destinations" style="width: 150px;">
+                <button class="btn search-btn" type="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>Search
+                </button>
             </form>
             <button class="navbar-toggler d-md-none search-toggle" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu">
                 <i class="fas fa-ellipsis-v"></i>
