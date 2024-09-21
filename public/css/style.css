@@ -191,5 +191,5 @@ body {
 }
 
 .search-toggle,.search-cross{
-    cursor: pointer;
+    cursor: pointer !important;
 }
