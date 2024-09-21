@@ -212,6 +212,10 @@ body {
     margin-right: 0.5rem;
 }
 
+.filter-dropDown{
+    text-decoration: none;
+}
+
 /* Search Input */
 .search-input {
     border-radius: 25px;
