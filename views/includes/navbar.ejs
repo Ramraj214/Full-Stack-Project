@@ -6,25 +6,22 @@
                 <a class="nav-link" href="/listings">Explore</a>
             </div>
             <div class="mx-auto d-flex">
-                <form class="search-form d-flex align-items-center" role="search" action="/listings/country"
-                    method="get">
+                <form class="search-form d-flex align-items-center" role="search" action="/listings/country" method="get">
                     <!-- Combined search bar -->
-                    <input class="form-control me-2 search-input" type="search" name="country"
-                        placeholder="Search destinations">
-
+                    <input class="form-control me-2 search-input" type="search" name="country" placeholder="Search destinations">
+                    
                     <!-- Button for medium and large screens -->
                     <button class="btn search-btn d-none d-md-inline-flex align-items-center" type="submit">
                         <i class="fa-solid fa-magnifying-glass"></i> Search
                     </button>
-
+                    
                     <!-- Button for mobile screens -->
                     <button class="btn search-btn d-md-none" type="submit" style="width: 40px; padding: 0;">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
                 </form>
             </div>
-            <button class="navbar-toggler d-md-none search-toggle" type="button" data-bs-toggle="offcanvas"
-                data-bs-target="#sidebarMenu">
+            <button class="navbar-toggler d-md-none search-toggle" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu">
                 <i class="fas fa-ellipsis-v"></i>
             </button>
         </div>
@@ -34,21 +31,18 @@
                 <% if(!currUser) { %>
                     <a class="nav-link" href="/signup"><b>Sign up</b></a>
                     <a class="nav-link" href="/login"><b>Log in</b></a>
-                    <% } %>
-                        <% if(currUser) { %>
-                            <a class="nav-link" href="/logout"><b>Log out</b></a>
-                            <% } %>
+                <% } %>
+                <% if(currUser) { %>
+                    <a class="nav-link" href="/logout"><b>Log out</b></a>
+                <% } %>
             </div>
         </div>
         <div class="offcanvas offcanvas-start d-md-none" tabindex="-1" id="sidebarMenu">
             <div class="offcanvas-header">
-                <div class="d-flex align-items-center">
-                    <h5 class="offcanvas-title">
-                        <a class="navbar-brand" href="/listings"><i class="fa-regular fa-compass"></i></a>
-                        <a class="nav-link" href="/listings">Explore</a>
-                    </h5>
-                </div>
-                <hr>
+                <h5 class="offcanvas-title">
+                    <a class="navbar-brand" href="/listings"><i class="fa-regular fa-compass"></i></a>
+                    <a href="/listings">Wanderlust</a>
+                </h5>
                 <button type="button" class="btn-close search-cross" data-bs-dismiss="offcanvas"></button>
             </div>
             <div class="offcanvas-body">
@@ -66,12 +60,12 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/login"><b>Log in</b></a>
                         </li>
-                        <% } %>
-                            <% if(currUser) { %>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/logout"><b>Log out</b></a>
-                                </li>
-                                <% } %>
+                    <% } %>
+                    <% if(currUser) { %>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/logout"><b>Log out</b></a>
+                        </li>
+                    <% } %>
                 </ul>
             </div>
         </div>
