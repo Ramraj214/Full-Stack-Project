@@ -55,33 +55,31 @@ module.exports.showListingsByCategory = async (req, res) => {
 
 module.exports.showListingsByCountry = async (req, res) => {
     const { country } = req.query;
-
-    // Check if country is an array and use the first element
     const countryValue = Array.isArray(country) ? country[0] : country;
+    const cleanedCountryValue = countryValue ? countryValue.trim().replace(/\s+/g, ' ') : '';
 
-    // Ensure it's a string and not empty
-    if (typeof countryValue !== 'string' || countryValue === "") {
+    if (typeof cleanedCountryValue !== 'string' || cleanedCountryValue === "") {
         req.flash("error", "Please provide a valid country.");
         return res.redirect("/listings");
     }
 
-    // Proceed with the database query
     const listings = await Listing.find({
-        country: new RegExp(countryValue, 'i')
+        country: new RegExp(cleanedCountryValue, 'i')
     })
-        .populate({
-            path: "reviews",
-            populate: { path: "author" }
-        })
-        .populate("owner"); 
+    .populate({
+        path: "reviews",
+        populate: { path: "author" }
+    })
+    .populate("owner"); 
 
     if (!listings.length) {
-        req.flash("error", `No listings found in country: ${countryValue}`);
+        req.flash("error", `No listings found in country: ${cleanedCountryValue}`);
         return res.redirect("/listings");
     }
 
-    res.render("listings/index.ejs", { allListings: listings, country: countryValue });
+    res.render("listings/index.ejs", { allListings: listings, country: cleanedCountryValue });
 };
+
 
 module.exports.createListing = async (req, res, next) => {
     console.log(req.body);
