@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
     <div class="container-fluid">
-        <a class="navbar-brand" href="/listings"><i class="fa-regular fa-compass"></i></a>
+        <a class="navbar-brand" href="/listings"><i class="fa-regular fa-compass"></i> Wanderlust</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -11,9 +11,7 @@
             <div class="navbar-nav ms-auto">
                 <form class="d-flex" role="search" action="/listings/country" method="get">
                     <input class="form-control me-2 search-input" type="search" name="country" placeholder="Search destinations">
-                    <button class="btn search-btn" type="submit"><i
-                            class="fa-solid fa-magnifying-glass"></i>Search
-                    </button>
+                    <button class="btn search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
                 </form>
             </div>
             <div class="navbar-nav ms-auto">
@@ -21,10 +19,10 @@
                 <% if(!currUser) { %>
                     <a class="nav-link" href="/signup"><b>Sign up</b></a>
                     <a class="nav-link" href="/login"><b>Log in</b></a>
-                    <% } %>
-                        <% if(currUser) { %>
-                            <a class="nav-link" href="/logout"><b>Log out</b></a>
-                            <% } %>
+                <% } else { %>
+                    <a class="nav-link" href="/logout"><b>Log out</b></a>
+                <% } %>
             </div>
         </div>
+    </div>
 </nav>
