@@ -139,7 +139,7 @@ body {
     overflow-x: auto;
 }
 
-#sidebar-filters{
+.sidebar-filters{
     display: flex;
     flex-direction: column;
     justify-content: flex-start; 
