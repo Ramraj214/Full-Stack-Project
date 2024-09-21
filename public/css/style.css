@@ -206,3 +206,8 @@ body {
     padding: 0.5rem; 
     min-width: 50px; 
 }
+
+.sidebar-link{
+    text-decoration: none;
+    color: #222222;
+}
