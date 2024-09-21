@@ -189,3 +189,7 @@ body {
     border-radius: 25px;
     padding: 0.5rem 3rem 0.5rem 3rem;
 }
+
+.search-toggle,.search-cross{
+    cursor: pointer;
+}
