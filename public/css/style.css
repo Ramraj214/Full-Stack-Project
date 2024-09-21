@@ -139,6 +139,18 @@ body {
     overflow-x: auto;
 }
 
+#sidebar-filters{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: flex-start;
+    padding: 1rem; 
+    background-color: #f8f9fa; 
+    border-radius: 0.5rem;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
 #filters a {
     text-decoration: none;
     color: #222222;
@@ -212,6 +224,7 @@ body {
 
 .filter-dropDown{
     text-decoration: none !important;
+    color: #222222;
 }
 
 /* Search Input */
