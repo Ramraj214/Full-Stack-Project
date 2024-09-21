@@ -131,6 +131,7 @@ body {
 #filters {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center; 
     align-items: center;
     padding: 1rem; 
     background-color: #f8f9fa; 
@@ -213,7 +214,7 @@ body {
 }
 
 .filter-dropDown{
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 /* Search Input */
@@ -233,6 +234,6 @@ body {
 }
 
 .sidebar-link{
-    text-decoration: none;
+    text-decoration: none !important;
     color: #222222;
 }
