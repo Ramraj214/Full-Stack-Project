@@ -7,7 +7,7 @@
     <div class="col-12">
         <h4><%= listing.title %></h4>
     </div>
-    <div class="card listing-card col-12 show-card">
+    <div class="card listing-card col-12 col-md-6 mx-auto show-card"> <!-- Full width on mobile, half width on desktop -->
         <img src="<%= listing.image.url %>" class="card-img-top show-img img-fluid" alt="listing image">
         <div class="card-body">
             <p class="card-text"><i>Owned by: <%= listing.owner.username %></i></p>
@@ -18,13 +18,7 @@
         </div>
     </div>
     <% if(currUser && currUser._id.equals(listing.owner._id)) { %>
-        <div class="btns mb-3 text-center col-12 d-md-none"> <!-- For mobile -->
-            <a href="/listings/<%= listing._id %>/edit" class="btn btn-dark edit-btn me-2 d-block mb-2">Edit</a>
-            <form method="POST" action="/listings/<%= listing._id %>?_method=DELETE" class="d-inline">
-                <button class="btn btn-dark delete-btn d-block">Delete</button>
-            </form>
-        </div>
-        <div class="btns mb-3 text-center col-12 d-none d-md-block"> <!-- For desktop -->
+        <div class="btns mb-3 text-center col-12 col-md-6 mx-auto"> <!-- Center buttons on desktop -->
             <a href="/listings/<%= listing._id %>/edit" class="btn btn-dark edit-btn me-2">Edit</a>
             <form method="POST" action="/listings/<%= listing._id %>?_method=DELETE" class="d-inline">
                 <button class="btn btn-dark delete-btn">Delete</button>
