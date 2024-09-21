@@ -4,37 +4,27 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
             <span class="navbar-toggler-icon"></span>
         </button>
-
-        <!-- Centered search form outside the collapse to keep it always visible -->
-        <div class="mx-auto">
-            <form class="d-flex" role="search" action="/listings/country" method="get">
-                <input class="form-control me-2 search-input" type="search" name="country" placeholder="Search destinations">
-                <button class="btn search-btn" type="submit">
-                    <i class="fa-solid fa-magnifying-glass"></i> Search
-                </button>
-            </form>
-        </div>
-
-        <!-- Collapsible part of the navbar -->
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav me-auto">
-                <!-- Explore link -->
+            <div class="navbar-nav">
                 <a class="nav-link" href="/listings">Explore</a>
             </div>
-
             <div class="navbar-nav ms-auto">
-                <!-- AirBnB your home link -->
+                <form class="d-flex" role="search" action="/listings/country" method="get">
+                    <input class="form-control me-2 search-input" type="search" name="country" placeholder="Search destinations">
+                    <button class="btn search-btn" type="submit"><i
+                            class="fa-solid fa-magnifying-glass"></i>Search
+                    </button>
+                </form>
+            </div>
+            <div class="navbar-nav ms-auto">
                 <a class="nav-link" href="/listings/new">AirBnB your home</a>
-
-                <!-- Sign up and Log in/Log out links -->
                 <% if(!currUser) { %>
                     <a class="nav-link" href="/signup"><b>Sign up</b></a>
                     <a class="nav-link" href="/login"><b>Log in</b></a>
-                <% } %>
-                <% if(currUser) { %>
-                    <a class="nav-link" href="/logout"><b>Log out</b></a>
-                <% } %>
+                    <% } %>
+                        <% if(currUser) { %>
+                            <a class="nav-link" href="/logout"><b>Log out</b></a>
+                            <% } %>
             </div>
         </div>
-    </div>
 </nav>
