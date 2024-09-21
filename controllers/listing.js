@@ -55,32 +55,24 @@ module.exports.showListingsByCategory = async (req, res) => {
 
 module.exports.showListingsByCountry = async (req, res) => {
     const { country } = req.query;
-
-    // Check if country exists and is a string
-    if (!country || typeof country !== 'string' || country.trim() === "") {
-        req.flash("error", "Please provide a valid country.");
-        return res.redirect("/listings");
-    }
-
-    const trimmedCountry = country.trim(); // Now safe to use trim
-
-    const listings = await Listing.find({
-        country: new RegExp(trimmedCountry, 'i') 
-    })
-        .populate({
-            path: "reviews",
-            populate: { path: "author" }
+        if (!country || country.trim() === "") {
+            req.flash("error", "Please provide a valid country.");
+            return res.redirect("/listings");
+        }
+        const listings = await Listing.find({
+            country: new RegExp(country, 'i') 
         })
-        .populate("owner"); 
-
-    if (!listings.length) {
-        req.flash("error", `No listings found in country: ${trimmedCountry}`);
-        return res.redirect("/listings");
-    }
-
-    res.render("listings/index.ejs", { allListings: listings, country: trimmedCountry });
+            .populate({
+                path: "reviews",
+                populate: { path: "author" }
+            })
+            .populate("owner"); 
+        if (!listings.length) {
+            req.flash("error", `No listings found in country: ${country}`);
+            return res.redirect("/listings");
+        }
+        res.render("listings/index.ejs", { allListings: listings, country });
 };
-
 
 module.exports.createListing = async (req, res, next) => {
     console.log(req.body);
