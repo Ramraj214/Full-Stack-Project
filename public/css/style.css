@@ -127,11 +127,14 @@ body {
     height: 50vh;
 }
 
-/*filter */
+/* Filter */
 #filters {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    padding: 1rem; 
+    background-color: #f8f9fa; 
+    border-radius: 0.5rem;
 }
 
 #filters a {
@@ -144,24 +147,29 @@ body {
     margin-right: 2rem;
     margin-top: 2rem;
     opacity: 0.7;
+    padding: 0.5rem; 
+    border-radius: 0.5rem; 
+    transition: background-color 0.3s, opacity 0.3s; 
 }
 
 .filter:hover {
     opacity: 1.0;
     cursor: pointer;
+    background-color: #e2e6ea; 
 }
 
 .filter p {
     font-size: 1rem;
+    margin: 0; 
 }
 
-/* tax toggle */
+/* Tax Toggle */
 .tax-info {
     display: none;
 }
 
 .tax-toggle {
-    border: 1px solid black;
+    border: 1px solid #ccc; 
     border-radius: 1rem;
     height: 3rem;
     padding: 0.75rem;
@@ -169,6 +177,19 @@ body {
     display: flex;
     align-items: center;
     margin-top: 0.5rem;
+    background-color: #ffffff; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+/* Sidebar Specific Styles */
+.offcanvas-body {
+    padding: 1rem; 
+    background-color: #f8f9fa; 
+}
+
+.offcanvas-body .filter {
+    border: 1px solid #dee2e6;
+    margin-bottom: 0.5rem; 
 }
 
 /* Search Button */
