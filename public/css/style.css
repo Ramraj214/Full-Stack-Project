@@ -250,4 +250,5 @@ body {
 .f-info-socials a{
     text-decoration: none !important;
     color: #222222;
+    margin-left: 0.5rem;
 }
