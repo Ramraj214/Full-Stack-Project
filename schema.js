@@ -8,7 +8,7 @@ module.exports.listingSchema = Joi.object({
         location: Joi.string().required(),
         country: Joi.string().required(),
         category: Joi.object({
-            type: Joi.string().valid('Trending', 'Beachfront', 'Rooms', 'Farms', 'New', 'arctic','iconic-cities','Mountains','Castles').required()
+            type: Joi.string().valid('Trending', 'Beachfront', 'Rooms', 'Farms', 'New', 'Arctic','iconic-cities','Mountains','Castles').required()
         }).required(),
         image: Joi.object({
             filename: Joi.string().optional(),
