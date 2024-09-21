@@ -3,9 +3,9 @@
         <div class="d-flex justify-content-between align-items-center w-100">
             <a class="navbar-brand" href="/listings"><i class="fa-regular fa-compass"></i></a>
             <a class="nav-link" href="/listings">Explore</a>
-            <div class="mx-auto d-none d-md-flex">
+            <div class="flex-grow-1 mx-auto d-none d-md-flex">
                 <form class="search-form d-flex" role="search" action="/listings/country" method="get">
-                    <input class="form-control me-2 search-input" type="search" name="country" placeholder="Search destinations" style="width: 12.5rem;"> <!-- 200px -->
+                    <input class="form-control me-2 search-input" type="search" name="country" placeholder="Search destinations">
                     <button class="btn search-btn" type="submit">
                         <i class="fa-solid fa-magnifying-glass"></i>Search
                     </button>
@@ -16,14 +16,14 @@
             </button>
         </div>
         <div class="collapse navbar-collapse d-none d-md-flex">
-            <div class="navbar-nav ms-auto d-flex flex-nowrap"> <!-- Prevent wrapping and use flex -->
+            <div class="navbar-nav ms-auto d-flex flex-nowrap">
                 <a class="nav-link" href="/listings/new">AirBnB your home</a>
                 <% if(!currUser) { %>
-                    <a class="nav-link" href="/signup"><b>Sign up</b></a>
-                    <a class="nav-link" href="/login"><b>Log in</b></a>
+                    <a class="nav-link" href="/signup" style="white-space: nowrap;"><b>Sign up</b></a>
+                    <a class="nav-link" href="/login" style="white-space: nowrap;"><b>Log in</b></a>
                 <% } %>
                 <% if(currUser) { %>
-                    <a class="nav-link" href="/logout"><b>Log out</b></a>
+                    <a class="nav-link" href="/logout" style="white-space: nowrap;"><b>Log out</b></a>
                 <% } %>
             </div>
         </div>
