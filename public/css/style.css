@@ -179,6 +179,17 @@ body {
     margin-top: 0; 
 }
 
+.sidebar #filters {
+    flex-direction: column; /* Vertical layout for sidebar */
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.sidebar .filter {
+    margin-bottom: 1rem; /* Add space between filters in the sidebar */
+    width: 100%; /* Full width for filters in the sidebar */
+}
+
 /* Sidebar Specific Styles */
 .offcanvas-body {
     padding: 1rem; 
