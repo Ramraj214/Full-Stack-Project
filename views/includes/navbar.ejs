@@ -6,22 +6,19 @@
                 <a class="nav-link" href="/listings">Explore</a>
             </div>
             <div class="mx-auto d-flex">
-                <form class="search-form d-flex align-items-center" role="search" action="/listings/country"
-                    method="get">
-                    <input class="form-control me-2 search-input" type="search" name="country"
-                        placeholder="Search destinations">
-
+                <form class="search-form d-flex align-items-center" role="search" action="/listings/country" method="get">
+                    <input class="form-control me-2 search-input" type="search" name="country" placeholder="Search destinations">
+                    
                     <button class="btn search-btn d-none d-md-inline-flex align-items-center" type="submit">
                         <i class="fa-solid fa-magnifying-glass"></i> Search
                     </button>
-
+                    
                     <button class="btn search-btn d-md-none" type="submit" style="width: 40px; padding: 0;">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
                 </form>
             </div>
-            <button class="navbar-toggler d-md-none search-toggle" type="button" data-bs-toggle="offcanvas"
-                data-bs-target="#sidebarMenu">
+            <button class="navbar-toggler d-md-none search-toggle" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu">
                 <i class="fas fa-ellipsis-v"></i>
             </button>
         </div>
@@ -31,10 +28,10 @@
                 <% if(!currUser) { %>
                     <a class="nav-link" href="/signup"><b>Sign up</b></a>
                     <a class="nav-link" href="/login"><b>Log in</b></a>
-                    <% } %>
-                        <% if(currUser) { %>
-                            <a class="nav-link" href="/logout"><b>Log out</b></a>
-                            <% } %>
+                <% } %>
+                <% if(currUser) { %>
+                    <a class="nav-link" href="/logout"><b>Log out</b></a>
+                <% } %>
             </div>
         </div>
     </div>
@@ -42,85 +39,83 @@
 
 <!-- Filters for Desktop -->
 <div class="d-none d-md-block">
-    <div class="sidebar">
-        <div id="filters" class="mt-3">
-            <div class="filter">
-                <a href="/listings/category/Trending">
-                    <div>
-                        <i class="fa-solid fa-fire"></i>
-                    </div>
-                    <p>Trending</p>
-                </a>
-            </div>
-            <div class="filter">
-                <a href="/listings/category/Beachfront">
-                    <div>
-                        <i class="fa-solid fa-umbrella-beach"></i>
-                    </div>
-                    <p>Beachfront</p>
-                </a>
-            </div>
-            <div class="filter">
-                <a href="/listings/category/Rooms">
-                    <div>
-                        <i class="fa-solid fa-bed"></i>
-                    </div>
-                    <p>Rooms</p>
-                </a>
-            </div>
-            <div class="filter">
-                <a href="/listings/category/iconic-cities">
-                    <div>
-                        <i class="fa-solid fa-mountain-city"></i>
-                    </div>
-                    <p>Iconic Cities</p>
-                </a>
-            </div>
-            <div class="filter">
-                <a href="/listings/category/mountains">
-                    <div>
-                        <i class="fa-solid fa-mountain"></i>
-                    </div>
-                    <p>Mountains</p>
-                </a>
-            </div>
-            <div class="filter">
-                <a href="/listings/category/castles">
-                    <div>
-                        <i class="fa-brands fa-fort-awesome"></i>
-                    </div>
-                    <p>Castles</p>
-                </a>
-            </div>
-            <div class="filter">
-                <a href="/listings/category/arctic">
-                    <div>
-                        <i class="fa-solid fa-snowflake"></i>
-                    </div>
-                    <p>Arctic</p>
-                </a>
-            </div>
-            <div class="filter">
-                <a href="/listings/category/Farms">
-                    <div>
-                        <i class="fa-solid fa-cow"></i>
-                    </div>
-                    <p>Farms</p>
-                </a>
-            </div>
-            <div class="filter">
-                <a href="/listings/category/new">
-                    <div>
-                        <i class="fa-solid fa-key"></i>
-                    </div>
-                    <p>New</p>
-                </a>
-            </div>
-            <div class="tax-toggle">
-                <div class="form-check-reverse form-switch">
-                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                    <label class="form-check-label" for="flexSwitchCheckDefault">Display Total after Taxes</label>
+    <div id="filters" class="mt-3">
+        <div class="filter">
+            <a href="/listings/category/Trending">
+                <div>
+                    <i class="fa-solid fa-fire"></i>
                 </div>
+                <p>Trending</p>
+            </a>
+        </div>
+        <div class="filter">
+            <a href="/listings/category/Beachfront">
+                <div>
+                    <i class="fa-solid fa-umbrella-beach"></i>
+                </div>
+                <p>Beachfront</p>
+            </a>
+        </div>
+        <div class="filter">
+            <a href="/listings/category/Rooms">
+                <div>
+                    <i class="fa-solid fa-bed"></i>
+                </div>
+                <p>Rooms</p>
+            </a>
+        </div>
+        <div class="filter">
+            <a href="/listings/category/iconic-cities">
+                <div>
+                    <i class="fa-solid fa-mountain-city"></i>
+                </div>
+                <p>Iconic Cities</p>
+            </a>
+        </div>
+        <div class="filter">
+            <a href="/listings/category/mountains">
+                <div>
+                    <i class="fa-solid fa-mountain"></i>
+                </div>
+                <p>Mountains</p>
+            </a>
+        </div>
+        <div class="filter">
+            <a href="/listings/category/castles">
+                <div>
+                    <i class="fa-brands fa-fort-awesome"></i>
+                </div>
+                <p>Castles</p>
+            </a>
+        </div>
+        <div class="filter">
+            <a href="/listings/category/arctic">
+                <div>
+                    <i class="fa-solid fa-snowflake"></i>
+                </div>
+                <p>Arctic</p>
+            </a>
+        </div>
+        <div class="filter">
+            <a href="/listings/category/Farms">
+                <div>
+                    <i class="fa-solid fa-cow"></i>
+                </div>
+                <p>Farms</p>
+            </a>
+        </div>
+        <div class="filter">
+            <a href="/listings/category/new">
+                <div>
+                    <i class="fa-solid fa-key"></i>
+                </div>
+                <p>New</p>
+            </a>
+        </div>
+        <div class="tax-toggle">
+            <div class="form-check-reverse form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                <label class="form-check-label" for="flexSwitchCheckDefault">Display Total after Taxes</label>
             </div>
         </div>
     </div>
@@ -150,102 +145,97 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/login"><b>Log in</b></a>
                 </li>
-                <% } %>
-                    <% if(currUser) { %>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/logout"><b>Log out</b></a>
-                        </li>
-                        <% } %>
+            <% } %>
+            <% if(currUser) { %>
+                <li class="nav-item">
+                    <a class="nav-link" href="/logout"><b>Log out</b></a>
+                </li>
+            <% } %>
         </ul>
 
         <!-- Dropdown for Filters -->
         <div class="mt-3">
-            <button class="btn btn-link filter-dropDown" type="button" data-bs-toggle="collapse"
-                data-bs-target="#filterDropdown" aria-expanded="false" aria-controls="filterDropdown">
+            <button class="btn btn-link filter-dropDown" type="button" data-bs-toggle="collapse" data-bs-target="#filterDropdown" aria-expanded="false" aria-controls="filterDropdown">
                 <b>Filters</b>
             </button>
             <div class="collapse" id="filterDropdown">
-                <div class="sidebar">
-                    <div id="filters" class="mt-2">
-                        <div class="filter">
-                            <a href="/listings/category/Trending">
-                                <div>
-                                    <i class="fa-solid fa-fire"></i>
-                                </div>
-                                <p>Trending</p>
-                            </a>
-                        </div>
-                        <div class="filter">
-                            <a href="/listings/category/Beachfront">
-                                <div>
-                                    <i class="fa-solid fa-umbrella-beach"></i>
-                                </div>
-                                <p>Beachfront</p>
-                            </a>
-                        </div>
-                        <div class="filter">
-                            <a href="/listings/category/Rooms">
-                                <div>
-                                    <i class="fa-solid fa-bed"></i>
-                                </div>
-                                <p>Rooms</p>
-                            </a>
-                        </div>
-                        <div class="filter">
-                            <a href="/listings/category/iconic-cities">
-                                <div>
-                                    <i class="fa-solid fa-mountain-city"></i>
-                                </div>
-                                <p>Iconic Cities</p>
-                            </a>
-                        </div>
-                        <div class="filter">
-                            <a href="/listings/category/mountains">
-                                <div>
-                                    <i class="fa-solid fa-mountain"></i>
-                                </div>
-                                <p>Mountains</p>
-                            </a>
-                        </div>
-                        <div class="filter">
-                            <a href="/listings/category/castles">
-                                <div>
-                                    <i class="fa-brands fa-fort-awesome"></i>
-                                </div>
-                                <p>Castles</p>
-                            </a>
-                        </div>
-                        <div class="filter">
-                            <a href="/listings/category/arctic">
-                                <div>
-                                    <i class="fa-solid fa-snowflake"></i>
-                                </div>
-                                <p>Arctic</p>
-                            </a>
-                        </div>
-                        <div class="filter">
-                            <a href="/listings/category/Farms">
-                                <div>
-                                    <i class="fa-solid fa-cow"></i>
-                                </div>
-                                <p>Farms</p>
-                            </a>
-                        </div>
-                        <div class="filter">
-                            <a href="/listings/category/new">
-                                <div>
-                                    <i class="fa-solid fa-key"></i>
-                                </div>
-                                <p>New</p>
-                            </a>
-                        </div>
-                        <div class="tax-toggle">
-                            <div class="form-check-reverse form-switch">
-                                <input class="form-check-input" type="checkbox" role="switch"
-                                    id="flexSwitchCheckDefault">
-                                <label class="form-check-label" for="flexSwitchCheckDefault">Display Total after
-                                    Taxes</label>
+                <div id="filters" class="mt-2">
+                    <div class="filter">
+                        <a href="/listings/category/Trending">
+                            <div>
+                                <i class="fa-solid fa-fire"></i>
                             </div>
+                            <p>Trending</p>
+                        </a>
+                    </div>
+                    <div class="filter">
+                        <a href="/listings/category/Beachfront">
+                            <div>
+                                <i class="fa-solid fa-umbrella-beach"></i>
+                            </div>
+                            <p>Beachfront</p>
+                        </a>
+                    </div>
+                    <div class="filter">
+                        <a href="/listings/category/Rooms">
+                            <div>
+                                <i class="fa-solid fa-bed"></i>
+                            </div>
+                            <p>Rooms</p>
+                        </a>
+                    </div>
+                    <div class="filter">
+                        <a href="/listings/category/iconic-cities">
+                            <div>
+                                <i class="fa-solid fa-mountain-city"></i>
+                            </div>
+                            <p>Iconic Cities</p>
+                        </a>
+                    </div>
+                    <div class="filter">
+                        <a href="/listings/category/mountains">
+                            <div>
+                                <i class="fa-solid fa-mountain"></i>
+                            </div>
+                            <p>Mountains</p>
+                        </a>
+                    </div>
+                    <div class="filter">
+                        <a href="/listings/category/castles">
+                            <div>
+                                <i class="fa-brands fa-fort-awesome"></i>
+                            </div>
+                            <p>Castles</p>
+                        </a>
+                    </div>
+                    <div class="filter">
+                        <a href="/listings/category/arctic">
+                            <div>
+                                <i class="fa-solid fa-snowflake"></i>
+                            </div>
+                            <p>Arctic</p>
+                        </a>
+                    </div>
+                    <div class="filter">
+                        <a href="/listings/category/Farms">
+                            <div>
+                                <i class="fa-solid fa-cow"></i>
+                            </div>
+                            <p>Farms</p>
+                        </a>
+                    </div>
+                    <div class="filter">
+                        <a href="/listings/category/new">
+                            <div>
+                                <i class="fa-solid fa-key"></i>
+                            </div>
+                            <p>New</p>
+                        </a>
+                    </div>
+                    <div class="tax-toggle">
+                        <div class="form-check-reverse form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                            <label class="form-check-label" for="flexSwitchCheckDefault">Display Total after Taxes</label>
                         </div>
                     </div>
                 </div>
