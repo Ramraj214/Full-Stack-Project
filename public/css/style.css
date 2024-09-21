@@ -14,6 +14,10 @@ body {
     background-color: white;
 }
 
+.navbar-nav {
+    white-space: nowrap; /* Prevent items from wrapping */
+}
+
 .fa-compass {
     color: #fe424d;
     font-size: 2rem;
@@ -190,3 +194,10 @@ body {
     padding: 0.5rem 3rem 0.5rem 3rem;
 }
 
+.search-toggle {
+    cursor: pointer; /* Changes the cursor to a pointer (hand) */
+}
+
+.search-cross {
+    cursor: pointer; /* Changes the cursor to a pointer (hand) */
+}
