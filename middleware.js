@@ -63,7 +63,7 @@ module.exports.isReviewAuthor=async(req,res,next)=>{
 }
 
 // middleware/currentPath.js
-module.exports = (req, res, next) => {
+module.exports.currentPath = (req, res, next) => {
     res.locals.currPath = req.path; // Store the current path
     next();
 };
