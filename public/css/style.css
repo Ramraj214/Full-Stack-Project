@@ -199,7 +199,3 @@ body {
     opacity: 1; 
 }
 
-.search-input:focus {
-    border: 2px solid #fe424d; /* Border color on focus */
-    outline: none; 
-}
