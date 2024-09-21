@@ -39,7 +39,6 @@
 
 <!-- Filters for Desktop -->
 <div class="d-none d-md-block">
-    <% if (currentPage !== '/login' && currentPage !== '/signup' && currentPage !== '/listings/new' && currentPage !== '/listings/edit') { %>
     <div id="filters" class="mt-3">
         <div class="filter">
             <a href="/listings/category/Trending">
@@ -120,7 +119,6 @@
             </div>
         </div>
     </div>
-    <% } %>
 </div>
 
 <!-- Mobile Sidebar -->
@@ -155,7 +153,6 @@
             <% } %>
         </ul>
 
-        <% if (currentPage !== '/login' && currentPage !== '/signup' && currentPage !== '/listings/new' && currentPage !== '/listings/edit') { %>
         <!-- Dropdown for Filters -->
         <div class="mt-3">
             <button class="btn btn-link filter-dropDown" type="button" data-bs-toggle="collapse" data-bs-target="#filterDropdown" aria-expanded="false" aria-controls="filterDropdown">
@@ -244,6 +241,5 @@
                 </div>
             </div>
         </div>
-        <% } %>
     </div>
 </div>
