@@ -10,8 +10,15 @@
                     <!-- Combined search bar -->
                     <input class="form-control me-2 search-input" type="search" name="country"
                         placeholder="Search destinations" style="width: 100%; max-width: 250px;">
-                    <button class="btn search-btn" type="submit">
-                        <i class="fa-solid fa-magnifying-glass"></i>Search
+                    
+                    <!-- Button for medium and large screens -->
+                    <button class="btn search-btn d-none d-md-inline" type="submit">
+                        <i class="fa-solid fa-magnifying-glass"></i> Search
+                    </button>
+                    
+                    <!-- Button for mobile screens -->
+                    <button class="btn search-btn d-md-none" type="submit" style="width: 40px; padding: 0;">
+                        <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
                 </form>
             </div>
