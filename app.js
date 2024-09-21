@@ -87,11 +87,6 @@ app.use("/listings", listingRouter);
 app.use("/listings/:id/reviews", reviewRouter);
 app.use("/", userRouter);
 
-app.use((req, res, next) => {
-  res.locals.currentRoute = req.originalUrl;  // Store the current route
-  next();
-});
-
 
 app.all("/*", (req, res, next) => {
   next(new expressError(404, "page not found!"));
