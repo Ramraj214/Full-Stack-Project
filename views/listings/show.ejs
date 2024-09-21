@@ -18,7 +18,13 @@
         </div>
     </div>
     <% if(currUser && currUser._id.equals(listing.owner._id)) { %>
-        <div class="btns mb-3 text-center col-12">
+        <div class="btns mb-3 text-center col-12 d-md-none"> <!-- For mobile -->
+            <a href="/listings/<%= listing._id %>/edit" class="btn btn-dark edit-btn me-2 d-block mb-2">Edit</a>
+            <form method="POST" action="/listings/<%= listing._id %>?_method=DELETE" class="d-inline">
+                <button class="btn btn-dark delete-btn d-block">Delete</button>
+            </form>
+        </div>
+        <div class="btns mb-3 text-center col-12 d-none d-md-block"> <!-- For desktop -->
             <a href="/listings/<%= listing._id %>/edit" class="btn btn-dark edit-btn me-2">Edit</a>
             <form method="POST" action="/listings/<%= listing._id %>?_method=DELETE" class="d-inline">
                 <button class="btn btn-dark delete-btn">Delete</button>
