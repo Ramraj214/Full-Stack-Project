@@ -38,7 +38,7 @@
 </nav>
 
 <!-- Filters for Desktop -->
-<% if (!['/login', '/signup', '/edit', '/listings/new'].includes(currPath)) { %>
+<% if (!['/login', '/signup', '/edit', '/listings/new' '/listings/:id'].includes(currPath)) { %>
 <div class="d-none d-md-block">
     <div id="filters" class="mt-3">
         <div class="filter">
@@ -155,7 +155,7 @@
             <% } %>
         </ul>
 
-        <% if (!['/login', '/signup', '/edit', '/listings/new'].includes(currPath)) { %>
+        <% if (!['/login', '/signup', '/edit', '/listings/new','/listings/:id'].includes(currPath)) { %>
         <!-- Dropdown for Filters -->
         <div class="mt-3">
             <button class="btn btn-link filter-dropDown" type="button" data-bs-toggle="collapse" data-bs-target="#filterDropdown" aria-expanded="false" aria-controls="filterDropdown">
