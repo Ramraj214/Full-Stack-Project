@@ -16,7 +16,7 @@
             </button>
         </div>
         <div class="collapse navbar-collapse d-none d-md-flex">
-            <div class="navbar-nav ms-auto d-flex flex-nowrap"> <!-- Prevent wrapping and use flex -->
+            <div class="navbar-nav ms-auto d-flex flex-nowrap"> <!-- Prevent wrapping -->
                 <a class="nav-link" href="/listings/new">AirBnB your home</a>
                 <% if(!currUser) { %>
                     <a class="nav-link" href="/signup"><b>Sign up</b></a>
@@ -60,3 +60,9 @@
         </div>
     </div>
 </nav>
+
+<style>
+    .navbar-nav {
+        white-space: nowrap; /* Prevent items from wrapping */
+    }
+</style>
