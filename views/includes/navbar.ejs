@@ -2,6 +2,7 @@
     <div class="container-fluid">
         <div class="d-flex justify-content-between w-100">
             <a class="navbar-brand" href="/listings"><i class="fa-regular fa-compass"></i></a>
+            <a class="nav-link" href="/listings">Explore</a>
             <div class="mx-auto d-none d-md-flex">
                 <form class="search-form d-flex" role="search" action="/listings/country" method="get">
                     <input class="form-control me-2" type="search" name="country" placeholder="Search destinations" style="width: 250px;">
@@ -15,7 +16,7 @@
             </button>
         </div>
         <div class="collapse navbar-collapse d-none d-md-flex">
-            <div class="navbar-nav ms-auto">
+            <div class="navbar-nav ms-auto d-flex flex-nowrap"> <!-- Prevent wrapping and use flex -->
                 <a class="nav-link" href="/listings/new">AirBnB your home</a>
                 <% if(!currUser) { %>
                     <a class="nav-link" href="/signup"><b>Sign up</b></a>
