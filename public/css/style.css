@@ -130,13 +130,13 @@ body {
 /* Filter */
 #filters {
     display: flex;
-    justify-content: flex-start; /* Align items horizontally */
+    justify-content: center; 
     align-items: center;
     padding: 1rem; 
     background-color: #f8f9fa; 
     border-radius: 0.5rem;
-    flex-wrap: nowrap; /* Prevent wrapping */
-    overflow-x: auto; /* Add horizontal scrolling if necessary */
+    flex-wrap: nowrap; 
+    overflow-x: auto; 
 }
 
 #filters a {
