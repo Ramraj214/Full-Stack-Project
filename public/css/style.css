@@ -15,7 +15,7 @@ body {
 }
 
 .navbar-nav {
-    white-space: nowrap; /* Prevent items from wrapping */
+    white-space: nowrap;
 }
 
 .fa-compass {
@@ -130,13 +130,13 @@ body {
 /* Filter */
 #filters {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
-    padding: 1rem; 
-    background-color: #f8f9fa; 
+    padding: 1rem;
+    background-color: #f8f9fa;
     border-radius: 0.5rem;
-    flex-wrap: nowrap; 
-    overflow-x: auto; 
+    flex-wrap: nowrap;
+    overflow-x: auto;
 }
 
 #filters a {
@@ -146,9 +146,9 @@ body {
 
 .filter {
     text-align: center;
-    margin-right: 1rem; /* Adjust spacing between filters */
-    padding: 0.5rem; 
-    border-radius: 0.5rem; 
+    margin-right: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
     opacity: 0.7;
     transition: background-color 0.3s, opacity 0.3s;
 }
@@ -156,38 +156,37 @@ body {
 .filter:hover {
     opacity: 1.0;
     cursor: pointer;
-    background-color: #e2e6ea; 
+    background-color: #e2e6ea;
 }
 
 .filter p {
     font-size: 1rem;
-    margin: 0; 
+    margin: 0;
 }
 
 /* Tax Toggle */
 .tax-toggle {
-    border: 1px solid #ccc; 
+    border: 1px solid #ccc;
     border-radius: 1rem;
     height: 3rem;
-    padding: 0.75rem 1.5rem; /* Adjust padding to balance size */
-    margin-left: 1rem;
+    padding: 0.75rem 1.5rem;
     display: flex;
     align-items: center;
-    background-color: #ffffff; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-    white-space: nowrap; /* Prevent text wrapping */
-    margin-top: 0; /* Align with filters */
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+    margin-top: 0;
 }
 
 /* Sidebar Specific Styles */
 .offcanvas-body {
-    padding: 1rem; 
-    background-color: #f8f9fa; 
+    padding: 1rem;
+    background-color: #f8f9fa;
 }
 
 .offcanvas-body .filter {
     border: 1px solid #dee2e6;
-    margin-bottom: 0.5rem; 
+    margin-bottom: 0.5rem;
 }
 
 /* Search Button */
@@ -195,14 +194,14 @@ body {
     background-color: #fe424d;
     color: #fff;
     border-radius: 25px;
-    padding: 0 1rem; 
-    min-width: 100px; 
+    padding: 0 1rem;
+    min-width: 100px;
     height: 2.5rem;
-    font-size: 1rem; 
+    font-size: 1rem;
 }
 
 .search-btn:hover {
-    background-color: #d03b43; 
+    background-color: #d03b43;
 }
 
 .search-btn i {
@@ -210,7 +209,7 @@ body {
     margin-right: 0.5rem;
 }
 
-.filter-dropDown{
+.filter-dropDown {
     text-decoration: none !important;
 }
 
@@ -221,16 +220,16 @@ body {
 }
 
 .search-input::placeholder {
-    color: #aaa; 
-    opacity: 1; 
+    color: #aaa;
+    opacity: 1;
 }
 
 .btn.search-btn.d-md-none {
-    padding: 0.5rem; 
-    min-width: 50px; 
+    padding: 0.5rem;
+    min-width: 50px;
 }
 
-.sidebar-link{
+.sidebar-link {
     text-decoration: none !important;
     color: #222222;
 }
