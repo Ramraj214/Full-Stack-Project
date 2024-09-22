@@ -157,6 +157,14 @@ body {
 
 .filter-dropDown {
     margin-left: 0.5rem; 
+    text-decoration: none !important;
+    background-color: #fe424d;
+    color: #fff;
+    border-radius: 25px;
+    padding: 0 1rem;
+    min-width: 100px;
+    height: 2.5rem;
+    font-size: 1rem;
 }
 
 #filters a {
@@ -212,6 +220,7 @@ body {
 
 /* Search Button */
 .search-btn {
+    margin-right: 0.3rem;
     background-color: #fe424d;
     color: #fff;
     border-radius: 25px;
@@ -230,10 +239,6 @@ body {
     margin-right: 0.5rem;
 }
 
-.filter-dropDown {
-    text-decoration: none !important;
-    color: #222222;
-}
 
 /* Search Input */
 .search-input {
