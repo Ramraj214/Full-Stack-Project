@@ -18,14 +18,23 @@
   })
 })()
 
-let taxSwitch = document.getElementById("flexSwitchCheckDefault");
-taxSwitch.addEventListener("click", () => {
-  let taxInfo = document.getElementsByClassName("tax-info");
-  for (info of taxInfo) {
-    if (info.style.display != "inline") {
-      info.style.display = "inline";
-    } else {
-      info.style.display = "none";
+document.addEventListener("DOMContentLoaded", () => {
+  // Desktop Tax Switch
+  let desktopTaxSwitch = document.getElementById("flexSwitchCheckDefault");
+  if (desktopTaxSwitch) {
+    desktopTaxSwitch.addEventListener("click", toggleTaxInfo);
+  }
+
+  // Mobile Tax Switch
+  let mobileTaxSwitch = document.getElementById("mobileTaxToggle");
+  if (mobileTaxSwitch) {
+    mobileTaxSwitch.addEventListener("click", toggleTaxInfo);
+  }
+
+  function toggleTaxInfo() {
+    let taxInfoElements = document.getElementsByClassName("tax-info");
+    for (let info of taxInfoElements) {
+      info.style.display = info.style.display !== "inline" ? "inline" : "none";
     }
   }
-})
+});
