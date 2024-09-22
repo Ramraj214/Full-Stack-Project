@@ -1,27 +1,29 @@
 <% layout("/layouts/boilerplate") %> 
 
 <div class="row">
-  <div class="col-8 offset-2">
+  <div class="col-12 col-md-8 offset-md-2"> <!-- Full width on mobile, centered on desktop -->
     <br>
     <h3>Edit your Listing</h3>
-  <form method="POST" action="/listings/<%= listing._id %>?_method=PUT"  class="needs-validation" enctype="multipart/form-data" novalidate>
+    <form method="POST" action="/listings/<%= listing._id %>?_method=PUT" class="needs-validation" enctype="multipart/form-data" novalidate>
       <div class="mb-3">
         <label for="title" class="form-label">Title</label>
-        <input name="listing[title]" value="<%= listing.title %>"  type="text" class="form-control" required/>
+        <input name="listing[title]" value="<%= listing.title %>" type="text" class="form-control" required/>
         <div class="valid-feedback">
-          Title Looks good!
+          Title looks good!
         </div>
         <div class="invalid-feedback">
-          Please Enter Title.
+          Please enter a title.
         </div>
       </div>
+
       <div class="mb-3">
         <label for="description" class="form-label">Description</label>
-        <textarea name="listing[description]"class="form-control" required><%= listing.description %></textarea>
+        <textarea name="listing[description]" class="form-control" required><%= listing.description %></textarea>
         <div class="invalid-feedback">
-          Please enter a short Description.
-       </div>
+          Please enter a short description.
+        </div>
       </div>
+
       <div class="mb-3">
         <label for="category" class="form-label">Category</label>
         <select name="listing[category][type]" class="form-control" required>
@@ -31,7 +33,7 @@
           <option value="New">New</option>
           <option value="Rooms" selected>Rooms</option>
           <option value="Trending">Trending</option>
-          <option value="iconic-cities">Iconic-Cities</option> 
+          <option value="Iconic-Cities">Iconic Cities</option> 
           <option value="Mountains">Mountains</option>
           <option value="Castles">Castles</option>
         </select>
@@ -39,43 +41,49 @@
           Please select a category.
         </div>
       </div>
+
       <div class="mb-3">
-        <label for="original image" class="form-lable">Original image</label>
+        <label for="original-image" class="form-label">Original Image</label>
       </div>
+
       <div class="mb-3">
-        <img src="<%= originalImageUrl %>" class="preview-img" alt="preview">
+        <img src="<%= originalImageUrl %>" class="img-fluid" alt="preview"> <!-- img-fluid class makes the image responsive -->
       </div>
+
       <div class="mb-3">
         <label for="image" class="form-label">Upload New Image</label>
         <input name="listing[image]" type="file" class="form-control"/>
       </div>
+
       <div class="row">
-        <div class="mb-3 col-md-4">
+        <div class="mb-3 col-12 col-md-4"> <!-- Full width on mobile, 1/3 on desktop -->
           <label for="price" class="form-label">Price</label>
           <input name="listing[price]" type="number" value="<%= listing.price %>" class="form-control" required/>
           <div class="invalid-feedback">
             Price should be valid!
           </div>
         </div>
-        <div class="mb-3 col-md-8">
+
+        <div class="mb-3 col-12 col-md-8"> <!-- Full width on mobile, 2/3 on desktop -->
           <label for="country" class="form-label">Country</label>
           <input name="listing[country]" value="<%= listing.country %>" type="text" class="form-control" required/>
           <div class="invalid-feedback">
             Country name should be valid!
-         </div>
+          </div>
         </div>
       </div>
+
       <div class="mb-3">
         <label for="location" class="form-label">Location</label>
         <input name="listing[location]" value="<%= listing.location %>" type="text" class="form-control" required/>
         <div class="invalid-feedback">
           Location should be valid! 
-       </div>
+        </div>
       </div>
+
       <br>
-      <button class="btn btn-dark edit-btn">Edit</button>
-      <br>
-      <br>
+      <button class="btn btn-dark w-100">Edit</button> <!-- Full width button on mobile -->
+      <br><br>
     </form>
   </div>
 </div>
