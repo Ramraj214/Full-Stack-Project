@@ -158,8 +158,6 @@ body {
 .filter-dropDown {
     margin-left: 0;
     text-decoration: none !important;
-    background-color: #fe424d !important;
-    color: #fff !important;
     border-radius: 25px;
     padding: 0 1rem;
     min-width: 100px;
