@@ -25,6 +25,7 @@ body {
 }
 
 .nav-link {
+    margin: 0.3rem;
     color: #222222 !important;
 }
 
@@ -63,12 +64,12 @@ body {
 }
 
 .listing-card {
+    margin: 0.5rem;
     border: none !important;
     margin-bottom: 2rem;
 }
 
 .card-img-top {
-    margin: 0.5rem;
     height: 40vh;
     border-radius: 1rem !important;
     width: 100% !important;
@@ -152,6 +153,10 @@ body {
     border-radius: 0.5rem;
     flex-wrap: nowrap;
     overflow-x: auto;
+}
+
+.filter-dropDown {
+    margin-left: 0.5rem; 
 }
 
 #filters a {
